@@ -45,23 +45,3 @@ $view->assignMultiple(
 $output = $view->render();
 
 echo $output;
-
-/*
-foreach ($memes as $meme){
-$textup = $meme['TextUP'];
-$textdown = $meme['TextDOWN'];
-$name = $meme['Name'];
-$pfad = $meme['Pfad'];
-echo <<<END
-<div>
-<h2>$textup</h2>
-<h2>$textdown</h2>
-<img src = "images/$pfad">
-<br>
-<p>$name</p>
-<br>
-</div>
-END;
-}
-*/
-

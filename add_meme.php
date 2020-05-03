@@ -21,13 +21,14 @@ $bild = $_GET["Bild"];
 
 $pk_name = getNameID($queryBuilder, $name);
 $pk_picture = getPictureID($queryBuilder, $bild);
-insertMeme($queryBuilder, $textUP, $textDOWN, $pk_name["PK_UserID"], $pk_picture["PK_PictureID"]);
-/*
 if(!$pk_name){
     insertUser($queryBuilder, $name);
     $pk_name = getNameID($queryBuilder, $name);
 }
-*/
+insertMeme($queryBuilder, $textUP, $textDOWN, $pk_name["PK_UserID"], $pk_picture["PK_PictureID"]);
+
+
+
 
 function getNameID($queryBuilder, $name){
     return $queryBuilder
@@ -49,6 +50,15 @@ function getPictureID($queryBuilder, $bild){
         ->fetch();
 }
 
+function insertUser($queryBuilder, $name){
+    $queryBuilder
+        ->insert('memebenutzer')
+        ->values([
+            "Name" => ":Name"
+        ])
+        ->setParameter("Name",$name)
+        ->execute();
+}
 
 function insertMeme($queryBuilder, $TextUP, $TextDown, $pk_name,$pk_bild){
     $queryBuilder
@@ -69,14 +79,5 @@ function insertMeme($queryBuilder, $TextUP, $TextDown, $pk_name,$pk_bild){
 
 
 }
-/*
-function insertUser($queryBuilder, $name){
-    $queryBuilder
-        ->insert('memebenutzer')
-        ->values([
-            "Name" => ":Name"
-        ])
-        ->setParameter("Name",$name)
-        ->execute();
-}
-*/
+
+

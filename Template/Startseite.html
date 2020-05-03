@@ -30,6 +30,7 @@
             max-width: 500px;
             height: 500px;
             max-height: 500px;
+            margin-bottom: 50px;
         }
         .row{
             width: 100%;
@@ -44,7 +45,7 @@
         }
 
         #neck{
-            height: 50px;
+            height: 100px;
         }
 
         h2{
@@ -55,6 +56,7 @@
             max-width: 12%;
             height: auto;
             float: right;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -71,10 +73,23 @@
     </div>
 
 
-    <div class="col-xs-12" id="neck"></div>
+    <div class="col-xs-12" id="neck">
+
+        <label for="exampleFormControlSelect1">Filter:</label>
+        <select class="form-control" name = "Filter" id="exampleFormControlSelect1" onchange="filter();">
+            <option value="" selected>Alle</option>
+            <option value="meme_01.png" >Old Chinese Dude</option>
+            <option value="meme_02.png">Pacha</option>
+            <option value="meme_03.png">Happy Dog</option>
+            <option value="meme_04.png">Jerry</option>
+            <option value="meme_05.png">thinking Rex</option>
+            <option value="meme_06.png">sucess baby</option>
+        </select>
+
+    </div>
 </div>
 
-    <div class="row">
+    <div class="row" id="memes_all"style="display: flex">
     <f:for each="{memes}" as="meme">
         <div class="col-md-3">
             <div class="card custom-card">
@@ -83,14 +98,201 @@
                 <div class="custom-textdown"><h2 class="text-center">{meme.TextDOWN}</h2></div>
             </div>
             <h4>BY {meme.Name}</h4>
+            <br>
         </div>
-
     </f:for>
 </div>
+
+    <div class="row" id="memes_01" style="display: none">
+        <f:for each="{memes}" as="meme">
+            <f:if condition="{meme.Pfad} == 'meme_01.png'">
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <div class="custom-textup"><h2 class="text-center">{meme.TextUP}</h2></div>
+                        <img src = "images/{meme.Pfad}" class="card-image-top">
+                        <div class="custom-textdown"><h2 class="text-center">{meme.TextDOWN}</h2></div>
+                    </div>
+                    <h4>BY {meme.Name}</h4>
+                    <br>
+                </div>
+            </f:if>
+        </f:for>
+    </div>
+
+    <div class="row" id="memes_02" style="display: none">
+        <f:for each="{memes}" as="meme">
+            <f:if condition="{meme.Pfad} == 'meme_02.png'">
+            <div class="col-md-3">
+                <div class="card custom-card">
+                    <div class="custom-textup"><h2 class="text-center">{meme.TextUP}</h2></div>
+                    <img src = "images/{meme.Pfad}" class="card-image-top">
+                    <div class="custom-textdown"><h2 class="text-center">{meme.TextDOWN}</h2></div>
+                </div>
+                <h4>BY {meme.Name}</h4>
+                <br>
+            </div>
+            </f:if>
+        </f:for>
+    </div>
+
+    <div class="row" id="memes_03" style="display: none">
+        <f:for each="{memes}" as="meme">
+            <f:if condition="{meme.Pfad} == 'meme_03.png'">
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <div class="custom-textup"><h2 class="text-center">{meme.TextUP}</h2></div>
+                        <img src = "images/{meme.Pfad}" class="card-image-top">
+                        <div class="custom-textdown"><h2 class="text-center">{meme.TextDOWN}</h2></div>
+                    </div>
+                    <h4>BY {meme.Name}</h4>
+                    <br>
+                </div>
+            </f:if>
+        </f:for>
+    </div>
+    <div class="row" id="memes_04" style="display: none">
+        <f:for each="{memes}" as="meme">
+            <f:if condition="{meme.Pfad} == 'meme_04.png'">
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <div class="custom-textup"><h2 class="text-center">{meme.TextUP}</h2></div>
+                        <img src = "images/{meme.Pfad}" class="card-image-top">
+                        <div class="custom-textdown"><h2 class="text-center">{meme.TextDOWN}</h2></div>
+                    </div>
+                    <h4>BY {meme.Name}</h4>
+                    <br>
+                </div>
+            </f:if>
+        </f:for>
+    </div>
+
+    <div class="row" id="memes_05" style="display: none">
+        <f:for each="{memes}" as="meme">
+            <f:if condition="{meme.Pfad} == 'meme_05.png'">
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <div class="custom-textup"><h2 class="text-center">{meme.TextUP}</h2></div>
+                        <img src = "images/{meme.Pfad}" class="card-image-top">
+                        <div class="custom-textdown"><h2 class="text-center">{meme.TextDOWN}</h2></div>
+                    </div>
+                    <h4>BY {meme.Name}</h4>
+                    <br>
+                </div>
+            </f:if>
+        </f:for>
+    </div>
+
+    <div class="row" id="memes_06" style="display: none">
+        <f:for each="{memes}" as="meme">
+            <f:if condition="{meme.Pfad} == 'meme_06.png'">
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <div class="custom-textup"><h2 class="text-center">{meme.TextUP}</h2></div>
+                        <img src = "images/{meme.Pfad}" class="card-image-top">
+                        <div class="custom-textdown"><h2 class="text-center">{meme.TextDOWN}</h2></div>
+                    </div>
+                    <h4>BY {meme.Name}</h4>
+                    <br>
+                </div>
+            </f:if>
+        </f:for>
+    </div>
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<script>
+
+    function filter() {
+        let value = document.querySelector("#exampleFormControlSelect1").value;
+        var divall = document.getElementById("memes_all");
+        var div_memes01 = document.getElementById("memes_01");
+        var div_memes02 = document.getElementById("memes_02");
+        var div_memes03 = document.getElementById("memes_03");
+        var div_memes04 = document.getElementById("memes_04");
+        var div_memes05 = document.getElementById("memes_05");
+        var div_memes06 = document.getElementById("memes_06");
+        if (value == "") {
+            divall.style.display="flex";
+            div_memes01.style.display="none";
+            div_memes02.style.display="none";
+            div_memes03.style.display="none";
+            div_memes04.style.display="none";
+            div_memes05.style.display="none";
+            div_memes06.style.display="none";
+        }
+
+        if (value === "meme_01.png") {
+            divall.style.display="none";
+            div_memes01.style.display="flex";
+            div_memes02.style.display="none";
+            div_memes03.style.display="none";
+            div_memes04.style.display="none";
+            div_memes05.style.display="none";
+            div_memes06.style.display="none";
+        }
+
+        if (value === "meme_02.png") {
+            divall.style.display="none";
+            div_memes01.style.display="none";
+            div_memes02.style.display="flex";
+            div_memes03.style.display="none";
+            div_memes04.style.display="none";
+            div_memes05.style.display="none";
+            div_memes06.style.display="none";
+        }
+
+        if (value === "meme_03.png") {
+            divall.style.display="none";
+            div_memes01.style.display="none";
+            div_memes02.style.display="none";
+            div_memes03.style.display="flex";
+            div_memes04.style.display="none";
+            div_memes05.style.display="none";
+            div_memes06.style.display="none";
+        }
+
+        if (value === "meme_04.png") {
+            divall.style.display="none";
+            div_memes01.style.display="none";
+            div_memes02.style.display="none";
+            div_memes03.style.display="none";
+            div_memes04.style.display="flex";
+            div_memes05.style.display="none";
+            div_memes06.style.display="none";
+        }
+
+        if (value === "meme_05.png") {
+            divall.style.display="none";
+            div_memes01.style.display="none";
+            div_memes02.style.display="none";
+            div_memes03.style.display="none";
+            div_memes04.style.display="none";
+            div_memes05.style.display="flex";
+            div_memes06.style.display="none";
+        }
+
+        if (value === "meme_06.png") {
+            divall.style.display="none";
+            div_memes01.style.display="none";
+            div_memes02.style.display="none";
+            div_memes03.style.display="none";
+            div_memes04.style.display="none";
+            div_memes05.style.display="none";
+            div_memes06.style.display="flex";
+        }
+    }
+</script>
+
+
+
+
+
+
 </body>
 </html>

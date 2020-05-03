@@ -2,16 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Meme-Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .custom-textup{
+            position: absolute;
+            width: 100%;
+            color: white;
+        }
+
+        .custom-textdown{
+            position: absolute;
+            width: 100%;
+            color: white;
+            bottom: 0;
+
+        }
+        .custom-card{
+            position: relative;
+            text-align: center;
+        }
+
+        .col-md-3{
+            width: 500px;
+            max-width: 500px;
+            height: 500px;
+            max-height: 500px;
+
+        }
+        .row{
+            width: 100%;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .col-xs-12{
+            width: 100%;
+        }
+
+        #neck{
+            height: 50px;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        #add_button{
+            max-width: 12%;
+            height: auto;
+            float: right;
+        }
+
+        #back_button{
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-<h1>FORMULAR</h1>
+<h1>Meme-Generator</h1>
 
 <form action="/memegenerator/add_meme.php" METHOD="get">
 
     <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
+        <label for="exampleFormControlSelect1">Wähle ein Meme:</label>
         <select class="form-control" name = "Bild" id="exampleFormControlSelect1">
             <option value="meme_01.png" selected>Old Chinese Dude</option>
             <option value="meme_02.png">Pacha</option>
@@ -21,25 +77,30 @@
             <option value="meme_06.png">sucess baby</option>
         </select>
     </div>
-
-    <div>
+    <div class="col-md-3">
+    <div class="card custom-card">
+        <div class="custom-textup"><h2 class="text-center" id="TextUP_MEME"></h2></div>
         <img src="images/meme_01.png" id="preview">
+        <div class="custom-textdown"><h2 class="text-center" id="TextDOWN_MEME"></h2></div>
+    </div>
     </div>
 <br>
 
     <div class="form-group">
         <label for="TextUP">TextUP</label>
-        <input type="text" class="form-control" id="TextUP" name="TextUP" placeholder="Text Oben">
+        <input type="text" class="form-control" id="TextUP" name="TextUP" placeholder="Text Oben" onkeyup="Preview()">
     </div>
     <div class="form-group">
         <label for="TextDOWN">TextDOWN</label>
-        <input type="text" class="form-control" id="TextDOWN" name="TextDOWN" placeholder="Text Unten">
+        <input type="text" class="form-control" id="TextDOWN" name="TextDOWN" placeholder="Text Unten" onkeyup="Preview()">
     </div>
     <div class="form-group">
         <label for="Name">Name</label>
         <input type="text" class="form-control" id="Name" name="Name" placeholder="Deine Name (zB. Felix)">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    <a href="index.php"> <button type="button" id="back_button" class="btn btn-primary">Back</button> </a>
 </form>
 
 <script>
@@ -50,6 +111,15 @@
         let img = document.querySelector("#preview")
         img.src = "images/" + option.value
     })
+
+    function Preview () {
+
+        let Textoben = document.querySelector("#TextUP").value;
+        let Textunten = document.querySelector("#TextDOWN").value;
+        document.getElementById("TextUP_MEME").innerHTML = Textoben;
+        document.getElementById("TextDOWN_MEME").innerHTML = Textunten;
+
+    }
 
 </script>
 
