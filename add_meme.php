@@ -64,6 +64,10 @@ function insertMeme($queryBuilder, $TextUP, $TextDown, $pk_name,$pk_bild){
         ->setParameter("TextDown",$TextDown)
         ->setParameter("pk_bild",$pk_bild)
         ->execute();
+
+    echo file_get_contents("Template/add_meme.html");
+
+
 }
 /*
 function insertUser($queryBuilder, $name){

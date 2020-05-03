@@ -23,25 +23,69 @@
         }
         .custom-card{
             position: relative;
-
         }
 
+        .col-md-3{
+            width: 500px;
+            max-width: 500px;
+            height: 500px;
+            max-height: 500px;
+        }
+        .row{
+            width: 100%;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .col-xs-12{
+            width: 100%;
+        }
+
+        #neck{
+            height: 50px;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        #add_button{
+            max-width: 12%;
+            height: auto;
+            float: right;
+        }
     </style>
 </head>
 <body>
-<h1>Memes</h1>
-<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1>Meme-Generator</h1>
+            <h2>by Matthias Metz</h2>
+        </div>
+        <div class="col-md-4">
+            <a href="add.php"><img src="buttons/add_button.png" id="add_button"></a>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12" id="neck"></div>
+</div>
+
     <div class="row">
     <f:for each="{memes}" as="meme">
-        <div class="col-lg">
+        <div class="col-md-3">
             <div class="card custom-card">
                 <div class="custom-textup"><h2 class="text-center">{meme.TextUP}</h2></div>
                 <img src = "images/{meme.Pfad}" class="card-image-top">
                 <div class="custom-textdown"><h2 class="text-center">{meme.TextDOWN}</h2></div>
             </div>
-            </div>
+            <h4>BY {meme.Name}</h4>
+        </div>
+
     </f:for>
-    </div>
 </div>
 
 
