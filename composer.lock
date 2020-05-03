@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b32cf6904362bff4cb6ff18c0c38397",
+    "content-hash": "ff7de91c0b8472625a0c90fda195c900",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -257,6 +257,45 @@
                 "events"
             ],
             "time": "2019-11-10T09:48:07+00:00"
+        },
+        {
+            "name": "typo3fluid/fluid",
+            "version": "2.6.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3/Fluid.git",
+                "reference": "ba05e165bb4fd1302edf3f0280a149992e8c79be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3/Fluid/zipball/ba05e165bb4fd1302edf3f0280a149992e8c79be",
+                "reference": "ba05e165bb4fd1302edf3f0280a149992e8c79be",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^8.1",
+                "squizlabs/php_codesniffer": "^2.7"
+            },
+            "bin": [
+                "bin/fluid"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TYPO3Fluid\\Fluid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "description": "The TYPO3 Fluid template rendering engine",
+            "time": "2020-02-03T10:46:43+00:00"
         }
     ],
     "packages-dev": [],
