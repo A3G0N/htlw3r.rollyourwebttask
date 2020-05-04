@@ -5,9 +5,75 @@
     <title>Meme-Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="Template/Main.css">
+    <link rel="stylesheet" href="Template/Header.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<h1>Meme-Generator</h1>
+
+<div id="page">
+    <div id="buttons">
+        <div id="links_button">
+            <a class="fab-button" href="">
+                <div class="dot"></div>
+            </a>
+            <div class="fab-options">
+                <a class="fab-option" href="#"><i class="material-icons">refresh</i>
+                    <p>
+                        Refresh
+                    </p>
+                </a><a class="fab-option" href="#"><i class="material-icons">help</i>
+                <p>
+                    Support
+                </p>
+            </a><a class="fab-option" href="#"><i class="material-icons">info</i>
+                <p>
+                    Documantation
+                </p>
+            </a><a class="fab-option" href="#"><i class="material-icons">settings</i>
+                <p>
+                    Settings
+                </p>
+            </a>
+            </div>
+        </div>
+
+        <div id="mitte_button">
+            <a class="fab-button red" href="">
+                <div class="plus"></div>
+            </a>
+            <div class="fab-options">
+                <a class="fab-option" href="http://localhost/memegenerator/add.php"><i class="material-icons">insert_photo</i>
+                    <p>
+                        New Meme
+                    </p>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="rechts_button">
+            <a class="fab-button pink" href="">
+                <div class="menu"></div>
+            </a>
+            <div class="fab-options">
+                <a class="fab-option" href="http://localhost/memegenerator/index.php"><i class="material-icons">home</i>
+                    <p>
+                        Home
+                    </p>
+                </a><a class="fab-option" href="#"><i class="material-icons">account_circle</i>
+                <p>
+                    About Us
+                </p>
+            </a>
+            </div>
+
+        </div>
+    </div>
+    <div id="message">
+        <h1>MEME-Generator</h1>
+        <h2>by Matthias Metz</h2>
+    </div>
+</div>
 
 <form action="/memegenerator/add_meme.php" METHOD="get">
 

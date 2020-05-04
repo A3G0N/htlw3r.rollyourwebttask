@@ -11,9 +11,6 @@
     bottom: 0;
 
 }
-.custom-card{
-    position: relative;
-}
 
 .col-md-3{
     width: 500px;
@@ -22,31 +19,10 @@
     max-height: 500px;
     margin-bottom: 50px;
 }
-.row{
-    width: 100%;
-}
 
-h1{
-    text-align: center;
-}
-
-.col-xs-12{
-    width: 100%;
-}
 
 #neck{
     height: 100px;
-}
-
-h2{
-    text-align: center;
-}
-
-#add_button{
-    max-width: 12%;
-    height: auto;
-    float: right;
-    margin-top: 30px;
 }
 
 #back_button{

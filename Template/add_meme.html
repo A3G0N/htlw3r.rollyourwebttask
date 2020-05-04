@@ -3,21 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>MemeGenerator</title>
-
-    <style>
-
-        body {
-            text-align: center;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="add_meme.css">
+    <link rel="stylesheet" href="Header.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 </head>
 <body>
-<h1>Meme wurde erfolgreich erstellt</h1>
-<h2>Glückwunsch</h2>
-<a href="index.php" id="back_button">
-<button type="button" >Back to the Memes!</button>
-</a>
+
+<div id="page">
+
+<div id="buttons">
+        <div id="links_button">
+            <a class="fab-button" href="">
+                <div class="dot"></div>
+            </a>
+            <div class="fab-options">
+                <a class="fab-option" href="#"><i class="material-icons">refresh</i>
+                    <p>
+                        Refresh
+                    </p>
+                </a><a class="fab-option" href="#"><i class="material-icons">help</i>
+                <p>
+                    Support
+                </p>
+            </a><a class="fab-option" href="#"><i class="material-icons">info</i>
+                <p>
+                    Documantation
+                </p>
+            </a><a class="fab-option" href="#"><i class="material-icons">settings</i>
+                <p>
+                    Settings
+                </p>
+            </a>
+            </div>
+        </div>
+
+        <div id="mitte_button">
+            <a class="fab-button red" href="">
+                <div class="plus"></div>
+            </a>
+            <div class="fab-options">
+                <a class="fab-option" href="http://localhost/memegenerator/add.php"><i class="material-icons">insert_photo</i>
+                    <p>
+                        New Meme
+                    </p>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="rechts_button">
+            <a class="fab-button pink" href="">
+                <div class="menu"></div>
+            </a>
+            <div class="fab-options">
+                <a class="fab-option" href="http://localhost/memegenerator/index.php"><i class="material-icons">home</i>
+                    <p>
+                        Home
+                    </p>
+                </a><a class="fab-option" href="#"><i class="material-icons">account_circle</i>
+                <p>
+                    About Us
+                </p>
+            </a>
+          </div>
+
+</div>
+</div>
+<div id="message">
+        <h1>Meme wurde erfolgreich erstellt</h1>
+        <h2>Glückwunsch</h2>
+    </div>
+
+</div>
 </body>
 </html>
