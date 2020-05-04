@@ -11,20 +11,31 @@
     bottom: 0;
 
 }
-
-.col-md-3{
-    width: 500px;
-    max-width: 500px;
-    height: 500px;
-    max-height: 500px;
-    margin-bottom: 50px;
-}
-
-
 #neck{
     height: 100px;
 }
 
 #back_button{
     margin-top: 10px;
+}
+#bottom{
+    background-color: #222222;
+}
+
+.col-xs-10{
+    padding: 20px;
+}
+
+#container{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#submit_button, #back_button{
+    background-color: #222222;
+    color: #FEC400;
+    border-color: #222222;
 }

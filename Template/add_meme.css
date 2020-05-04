@@ -1,31 +1,7 @@
-#links {
-    width: 12em;
-    float: left;
-}
-
-#mitte {
-    margin-left: 12em;
-    margin-right: 12em;
-}
-
-#rechts {
-    width: 12em;
-    float: right;
-}
-
-#buttons{
-    display: flex;
-    flex-direction: row;
-}
-#message {
+h1, h2{
     text-align: center;
-    margin-left: 25%;
 }
 
-#page{
-    display: flex;
-    flex-direction: row;
-}
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;

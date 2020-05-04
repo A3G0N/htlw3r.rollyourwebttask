@@ -6,77 +6,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="Template/Main.css">
     <link rel="stylesheet" href="Template/Header.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-<div id="page">
-    <div id="buttons">
-        <div id="links_button">
-            <a class="fab-button" href="">
-                <div class="dot"></div>
-            </a>
-            <div class="fab-options">
-                <a class="fab-option" href="#"><i class="material-icons">refresh</i>
-                    <p>
-                        Refresh
-                    </p>
-                </a><a class="fab-option" href="#"><i class="material-icons">help</i>
-                <p>
-                    Support
-                </p>
-            </a><a class="fab-option" href="#"><i class="material-icons">info</i>
-                <p>
-                    Documantation
-                </p>
-            </a><a class="fab-option" href="#"><i class="material-icons">settings</i>
-                <p>
-                    Settings
-                </p>
-            </a>
-            </div>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a href="#" class="navbar-brand" style="color: #FEC400">Meme Generator</a>
+    <button class="navbar-toggler" type="button" data-target="#navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="http://localhost/memegenerator/index.php" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="http://localhost/memegenerator/add.php" class="nav-link">Add Meme</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navdrop" role="button" data-toggle="dropdown" data-hover="dropdown">Services</a>
+                <div class="dropdown-menu" aria-labelledby="navdrop">
+                    <a href="#" class="dropdown-item" onclick="filteraktivieren()">Filter</a>
+                </div>
 
-        <div id="mitte_button">
-            <a class="fab-button red" href="">
-                <div class="plus"></div>
-            </a>
-            <div class="fab-options">
-                <a class="fab-option" href="http://localhost/memegenerator/add.php"><i class="material-icons">insert_photo</i>
-                    <p>
-                        New Meme
-                    </p>
-                </a>
-            </div>
-
-        </div>
-
-        <div id="rechts_button">
-            <a class="fab-button pink" href="">
-                <div class="menu"></div>
-            </a>
-            <div class="fab-options">
-                <a class="fab-option" href="http://localhost/memegenerator/index.php"><i class="material-icons">home</i>
-                    <p>
-                        Home
-                    </p>
-                </a><a class="fab-option" href="#"><i class="material-icons">account_circle</i>
-                <p>
-                    About Us
-                </p>
-            </a>
-            </div>
-
-        </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact Us</a>
+            </li>
+        </ul>
     </div>
-    <div id="message">
-        <h1>MEME-Generator</h1>
-        <h2>by Matthias Metz</h2>
-    </div>
-</div>
+</nav>
 
+<br>
 <form action="/memegenerator/add_meme.php" METHOD="get">
-
     <div class="form-group">
         <label for="exampleFormControlSelect1">Wähle ein Meme:</label>
         <select class="form-control" name = "Bild" id="exampleFormControlSelect1">
@@ -109,7 +70,7 @@
         <label for="Name">Name</label>
         <input type="text" class="form-control" id="Name" name="Name" placeholder="Deine Name (zB. Felix)">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" id="submit_button" class="btn btn-primary">Submit</button>
     <br>
     <a href="index.php"> <button type="button" id="back_button" class="btn btn-primary">Back</button> </a>
 </form>
