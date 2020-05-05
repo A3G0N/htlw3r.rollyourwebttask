@@ -39,3 +39,9 @@
     color: #FEC400;
     border-color: #222222;
 }
+.col-md-3 {
+    width: 500px;
+    max-width: 500px;
+    height: 500px;
+    max-height: 500px;
+}

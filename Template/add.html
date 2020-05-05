@@ -49,11 +49,11 @@
             <option value="meme_06.png">sucess baby</option>
         </select>
     </div>
-    <div class="custom-card">
-    <div class="col-md-3">
-        <div class="custom-textup"><h2 class="text-center" id="TextUP_MEME"></h2></div>
-        <img src="images/meme_01.png" id="preview">
-        <div class="custom-textdown"><h2 class="text-center" id="TextDOWN_MEME"></h2></div>
+            <div class="card custom-card" style="width: 500px">
+                <div class="custom-textup"><h2 class="text-center" id="TextUP_MEME"></h2></div>
+                <img src = "images/meme_01.png" id="preview" width="500px">
+                <div class="custom-textdown"><h2 class="text-center" id="TextDOWN_MEME"></h2></div>
+            </div>
     </div>
     </div>
 <br>
@@ -70,13 +70,15 @@
         <label for="Name">Name</label>
         <input type="text" class="form-control" id="Name" name="Name" placeholder="Deine Name (zB. Felix)">
     </div>
+
+    <div class="form-group">
     <button type="submit" id="submit_button" class="btn btn-primary">Submit</button>
     <br>
     <a href="index.php"> <button type="button" id="back_button" class="btn btn-primary">Back</button> </a>
+    </div>
 </form>
 
 <script>
-
     let select =  document.querySelector("#exampleFormControlSelect1")
     select.addEventListener("change", function(value) {
         let option = document.querySelector("option:checked")
