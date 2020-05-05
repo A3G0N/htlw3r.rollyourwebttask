@@ -33,7 +33,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Contact Us</a>
+                <a href="#footer" onclick="Scroll()" class="nav-link">Contact Us</a>
             </li>
         </ul>
     </div>
@@ -162,50 +162,27 @@
 
 
 <!-- Footer -->
-<footer class="page-footer font-small teal pt-4">
-
-    <!-- Footer Text -->
+<footer class="page-footer font-small teal pt-4" id="footer">
     <div class="container-fluid text-center text-md-left">
-
-        <!-- Grid row -->
         <div class="row">
-
-            <!-- Grid column -->
             <div class="col-md-6 mt-md-0 mt-3">
-
-                <!-- Content -->
                 <h5 class="text-uppercase font-weight-bold">Why MemeGenerator 2020?</h5>
                 <p>
                     The Meme-Generator 2020 is intuitive and user-friendly. Simply create a new meme and share it with the whole community. You only want to see certain memes? No problem! Under Services you can activate a filter and filter for your favorite memes. We are constantly working on improving our website to guarantee the best possible meme experience for you.
                     </p>
-
             </div>
-            <!-- Grid column -->
-
             <hr class="clearfix w-100 d-md-none pb-3">
-
-            <!-- Grid column -->
             <div class="col-md-6 mb-md-0 mb-3">
-
-                <!-- Content -->
                 <h5 class="text-uppercase font-weight-bold">Contact Information:</h5>
                 <p>Mail: matthias.metz@htl.rennweg.at</p>
                 <p>By order of Weissheiten & Kasper</p>
             </div>
-            <!-- Grid column -->
         </div>
-        <!-- Grid row -->
     </div>
-    <!-- Footer Text -->
-
-    <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright: Matthias Metz
     </div>
-    <!-- Copyright -->
-
 </footer>
-<!-- Footer -->
-<!-- Footer -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -294,7 +271,10 @@
     function filteraktivieren(){
         let filter = document.getElementById("neck");
         filter.style.display="flex";}
-
+    function Scroll() {
+        var elmntToView = document.getElementById("footer");
+        elmntToView.scrollIntoView();
+    }
 </script>
 </body>
 </html>

@@ -45,3 +45,7 @@
     height: 500px;
     max-height: 500px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
